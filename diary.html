@@ -10,8 +10,8 @@
 </body>
 <script>
  function check(){
-  var c = document.cookie.split(';');
-  if (! c[0] == "solved=yes"){
+  var c = document.cookie;
+  if (! c == "solved=yes"){
     window.location.href = "https://mercurialwaffle.github.io/thevoice.html";
   }
  }
