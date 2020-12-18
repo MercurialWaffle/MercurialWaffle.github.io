@@ -15,7 +15,7 @@
 <p>(To all would-be present-finders: You'll <i>never</i> get past my impenetrable security without my password! <b>BWAHAHAHAHA!!!</b>)</p>
   <p>Password:  <input type="text" id="password"> <br> </p>
   <div><button onclick="validate()">Submit</button></div>
-  <div id="wrong"></div>
+  <div id="answer"></div>
 </body>
   
 <script>
@@ -34,8 +34,7 @@ function validate() {
   hashed += password.length;
 
   if (hashed == 11635) {
-	document.cookie = "solved=yes; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/"
-	window.location.href = "https://mercurialwaffle.github.io/diary.html";
+	document.getElementById("answer").innerHTML='<image width="320" height="240" <source src = "image.jpg">>';
   } else {
 	document.getElementById("wrong").innerHTML='<video autoplay width="320" height="240" <source src = "Dr. Cox Wrong Song.mp4">>';
   }
