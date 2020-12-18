@@ -22,6 +22,9 @@
   
 function validate() {
   
+  //You thought you could find the password by checking the password validation code?  You fool!
+  //I've built a hashing algorithm that's impossible to crack!!!
+	
   var password = document.getElementById("password").value;	
   var i;
   var hashed = 0;
@@ -31,7 +34,7 @@ function validate() {
   hashed += password.length;
 
   if (hashed == 11635) {
-	window.location.href = "https://mbarz6.github.io/maxafterpass.html";
+	window.location.href = "https://mercurialwaffle.github.io/diary.html";
   } else {
 	document.getElementById("wrong").innerHTML='<video autoplay width="320" height="240" <source src = "Dr. Cox Wrong Song.mp4">>';
   }
