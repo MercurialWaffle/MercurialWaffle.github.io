@@ -14,5 +14,26 @@
 <p>(To all would-be present-finders: You'll <i>never</i> get past my impenetrable security without my password! <b>BWAHAHAHAHA!!!</b>)</p>
   <p>Password:  <input type="text" id="password"> <br> </p>
   <div><button>Submit</button></div>
+  <div id="wrong"></div>
 </body>
+  
+<script>
+  
+function validate() {
+  
+  var password = document.getElementById("password").value;	
+  var i;
+  var hashed = 0;
+  for (i = 0; i < password.length; i++) {
+  	hashed += password.charCodeAt((i * i) % password.length) * (i + 1);
+  }
+  hashed += password.length;
+
+  if (hashed == 11635) {
+	window.location.href = "https://mbarz6.github.io/maxafterpass.html";
+  } else {
+	document.getElementByID("wrong").innerHTML='<video>';
+  }
+}
+  </script>
 </html>
