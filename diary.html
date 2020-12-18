@@ -2,7 +2,21 @@
 <head>
 <title="The Voice's Diary">
 </head>
-<body>
+<body onload=check()>
 <h3> Friday December 18</h3>
 <p> Dear diary, <br> Whew!  It took a lot of work but I finally figured out where to hide Colin's present: in the [wherever]!! He'll never find it there! <b>BWAHAHAHHAHAHAHAH</b>!!!</p>
+  <div><button onclick=reset()>"Reset puzzle"</button></div>
 </body>
+<script>
+ function check(){
+  var c = document.cookie.split(';');
+  if (! c[0] == "solved=yes"){
+    window.location.href = "https://mercurialwaffle.github.io/thevoice.html";
+  }
+ }
+ function reset(){
+  document.cookie = "solved=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+  window.location.href = "https://mercurialwaffle.github.io/thevoice.html";
+}
+</script>
+  
